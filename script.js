@@ -1,3 +1,5 @@
+var player;
+
 function getLyrics(band, song) {
   var string = 'https://api.lyrics.ovh/v1/' + band + '/' + song + '/';
 
