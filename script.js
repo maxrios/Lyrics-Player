@@ -71,7 +71,7 @@ input.addEventListener('keyup', function(event) {
     if (bandAndsong == "") {
       getVideo("Rick Astley - Never Gonna Give You Up (Video)");
       getLyrics("Rick Astley", "Never Gonna Give You Up");
-    }
+    } else {
     getVideo(bandAndsong);
     bandAndsong = bandAndsong.split(', ');
     bandAndsong[0] = bandAndsong[0].trim();
@@ -79,5 +79,6 @@ input.addEventListener('keyup', function(event) {
     bandAndsong[0] = bandAndsong[0].replace(" ", "+");
     bandAndsong[1] = bandAndsong[1].replace(" ", "+");
     getLyrics(bandAndsong[0], bandAndsong[1]);
+    }
   }
 });
