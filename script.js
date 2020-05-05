@@ -47,7 +47,7 @@ function stopVideo() {
 
 
 function getVideo(bandAndsong) {
-  var key = "AIzaSyDX49nkp_0FliM0oONBBfD5xqVIh7-8rkM";
+  var key = "";
   var url = "https://www.googleapis.com/youtube/v3/search?q=" + bandAndsong + "&part=snippet&type=video&key=" + key;
 
   var request = new XMLHttpRequest();
