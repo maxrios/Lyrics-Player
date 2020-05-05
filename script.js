@@ -20,7 +20,15 @@ function handleLyrics() {
 
 
 function onYouTubeIframeAPIReady() {
-
+  player = new YT.Player('video-player', {
+    height: '390',
+    width: '640',
+    videoId: '8tPnX7OPo0Q',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
 }
 
 function onPlayerReady(event) {
@@ -55,22 +63,14 @@ function handleVideo() {
   player.loadVideoById(data.items[0].id.videoId);
 }
 
+player.stopVideo();
 // Launch with one person activity
 // searchByKeyword('linkin+park', 'numb');
 var input = document.getElementById('song-input');
 input.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
-    player = new YT.Player('video-player', {
-      height: '390',
-      width: '640',
-      videoId: '',
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-    onPlayerReady;
     var bandAndsong = document.getElementById('song-input').value;
+    player.startVideo();
     if (bandAndsong.trim() == "") {
       getVideo("Rick Astley - Never Gonna Give You Up (Video)");
       getLyrics("Rick Astley", "Never Gonna Give You Up");
