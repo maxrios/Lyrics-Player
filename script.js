@@ -67,7 +67,8 @@ var input = document.getElementById('song-input');
 input.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
     var bandAndsong = document.getElementById('song-input').value;
-    document.getElementsByClassName('youtube-player-script').src = 'https://www.youtube.com/iframe_api';
+    var script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
     if (bandAndsong == "") {
       getVideo("Rick Astley - Never Gonna Give You Up (Video)");
       getLyrics("Rick Astley", "Never Gonna Give You Up");
