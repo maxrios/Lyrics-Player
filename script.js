@@ -21,7 +21,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('video-player', {
     height: '390',
     width: '640',
-    videoId: 'l9zdQUA-dsk',
+    videoId: '',
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
@@ -58,7 +58,6 @@ function getVideo(bandAndsong) {
 
 function handleVideo() {
   var data = JSON.parse(this.responseText);
-  console.log(data);
   player.loadVideoById(data.items[0].id.videoId);
 }
 
@@ -68,6 +67,11 @@ var input = document.getElementById('song-input');
 input.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
     var bandAndsong = document.getElementById('song-input').value;
+    document.getElementsByClassName('youtube-player-script').src = 'https://www.youtube.com/iframe_api';
+    if (bandAndsong == "") {
+      getVideo("Rick Astley - Never Gonna Give You Up (Video)");
+      getLyrics("Rick Astley", "Never Gonna Give You Up");
+    }
     getVideo(bandAndsong);
     bandAndsong = bandAndsong.split(', ');
     bandAndsong[0] = bandAndsong[0].trim();
