@@ -69,6 +69,7 @@ input.addEventListener('keyup', function(event) {
         'onStateChange': onPlayerStateChange
       }
     });
+    onPlayerReady;
     var bandAndsong = document.getElementById('song-input').value;
     if (bandAndsong.trim() == "") {
       getVideo("Rick Astley - Never Gonna Give You Up (Video)");
