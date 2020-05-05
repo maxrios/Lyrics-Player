@@ -58,6 +58,7 @@ function getVideo(bandAndsong) {
 
 function handleVideo() {
   var data = JSON.parse(this.responseText);
+  console.log(data);
   player.loadVideoById(data.items[0].id.videoId);
 }
 
