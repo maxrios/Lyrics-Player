@@ -12,9 +12,9 @@
 
 body {
   /*background-color: #99badd;*/
-  background-image: url('../images/bg.png');
+  background-image: url('bg.png');
 	background-size: auto;
-	
+
 }
 
 #song-input{
@@ -24,10 +24,10 @@ body {
 	height: 5%;
 	padding: 5px 10px;
 	color: black;
-	
-	
 
-	
+
+
+
 }
 
 #search{
@@ -64,8 +64,8 @@ body {
   margin-left: 65%;
   text-align: center;
   height: 50%;
-	
-	
+
+
 }
 
 
