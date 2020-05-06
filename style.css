@@ -12,7 +12,7 @@
 
 body {
   /*background-color: #99badd;*/
-  background-image: url('../images/bg.png');
+  background-image: url('bg.png');
 	background-size: 1500px 900px;
 }
 
@@ -24,7 +24,7 @@ body {
 	padding: 5px 10px;
 	color: black;
 
-	
+
 }
 
 #search{
@@ -52,7 +52,7 @@ body {
 	word-wrap: break-word;
 	overflow-y: hidden;
 	text-overflow: ellipsis;
-	
+
 }
 #lybox {
 	overflow: auto;
