@@ -13,7 +13,7 @@
 body {
   /*background-color: #99badd;*/
   background-image: url('bg.png');
-	background-size: 1500px 900px;
+	background-size: auto;
 }
 
 #song-input{
