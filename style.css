@@ -12,8 +12,9 @@
 
 body {
   /*background-color: #99badd;*/
-  background-image: url('bg.png');
-	background-size: auto;
+  background: url(bg.jpg) no-repeat center center fixed;
+  /* background-image: url('bg.png');
+	background-size: auto; */
 }
 
 #song-input{
