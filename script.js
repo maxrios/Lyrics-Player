@@ -77,6 +77,9 @@ input.addEventListener('keyup', function(event) {
       bandAndsong[0] = bandAndsong[0].replace(" ", "+");
       bandAndsong[1] = bandAndsong[1].replace(" ", "+");
       getLyrics(bandAndsong[0], bandAndsong[1]);
+    } else {
+      getVideo("Rick Astley - Never Gonna Give You Up");
+      getLyrics("Rick Astley", "Never Gonna Give You Up");
     }
   }
 });
@@ -92,5 +95,8 @@ search.addEventListener('click', function(event) {
       bandAndsong[0] = bandAndsong[0].replace(" ", "+");
       bandAndsong[1] = bandAndsong[1].replace(" ", "+");
       getLyrics(bandAndsong[0], bandAndsong[1]);
+    } else {
+      getVideo("Rick Astley - Never Gonna Give You Up");
+      getLyrics("Rick Astley", "Never Gonna Give You Up");
     }
 });
