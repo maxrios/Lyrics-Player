@@ -1,8 +1,43 @@
-#activity-box {
+#input {
     position: absolute;
     margin: auto;
     top: 0;
     right: 0;
+    bottom: 100px;
+    left: 70px;
+    width: 50%;
+    height: 70%;
+    text-align: center;
+}
+
+body {
+  /*background-color: #99badd;*/
+  background-image: url('../images/bg.png');
+	background-size: 1500px 900px;
+}
+
+#song-input{
+	border-radius: 25px;
+	border: none;
+	width: 40%;
+	height: 5%;
+	padding: 5px 10px;
+	color: black;
+
+	
+}
+
+#search{
+	position: absolute;
+	left: 640px;
+	top: 100px;
+}
+
+#video-player {
+	position: absolute;
+    margin: auto;
+    top: 70px;
+    right: 700px;
     bottom: 0;
     left: 0;
     width: 50%;
@@ -10,6 +45,15 @@
     text-align: center;
 }
 
-body {
-  background-color: #99badd;
+#lyrics {
+	position: absolute;
+	left: 650px;
+	top: 120px;
+	word-wrap: break-word;
+	overflow-y: hidden;
+	text-overflow: ellipsis;
+	
+}
+#lybox {
+	overflow: auto;
 }
