@@ -12,7 +12,7 @@
 
 body {
   /*background-color: #99badd;*/
-  background: url(bg.jpg) no-repeat center center fixed;
+  background: url('bg.png') no-repeat center center fixed;
   /* background-image: url('bg.png');
 	background-size: auto; */
 }
