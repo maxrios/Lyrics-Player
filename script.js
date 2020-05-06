@@ -69,36 +69,28 @@ var input = document.getElementById('song-input');
 input.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
     var bandAndsong = document.getElementById('song-input').value;
-    if (bandAndsong.trim() == "") {
-      getVideo("Rick Astley - Never Gonna Give You Up (Video)");
-      getLyrics("Rick Astley", "Never Gonna Give You Up");
-    } else {
-    getVideo(bandAndsong);
-    bandAndsong = bandAndsong.split(', ');
-    bandAndsong[0] = bandAndsong[0].trim();
-    bandAndsong[1] = bandAndsong[1].trim();
-    bandAndsong[0] = bandAndsong[0].replace(" ", "+");
-    bandAndsong[1] = bandAndsong[1].replace(" ", "+");
-    getLyrics(bandAndsong[0], bandAndsong[1]);
+    if (bandAndsong.trim() != "") {
+      getVideo(bandAndsong);
+      bandAndsong = bandAndsong.split(', ');
+      bandAndsong[0] = bandAndsong[0].trim();
+      bandAndsong[1] = bandAndsong[1].trim();
+      bandAndsong[0] = bandAndsong[0].replace(" ", "+");
+      bandAndsong[1] = bandAndsong[1].replace(" ", "+");
+      getLyrics(bandAndsong[0], bandAndsong[1]);
     }
   }
 });
 
 var search = document.getElementById('search');
 search.addEventListener('click', function(event) {
-  if (event.keyCode === 13) {
     var bandAndsong = document.getElementById('song-input').value;
-    if (bandAndsong.trim() == "") {
-      getVideo("Rick Astley - Never Gonna Give You Up (Video)");
-      getLyrics("Rick Astley", "Never Gonna Give You Up");
-    } else {
-    getVideo(bandAndsong);
-    bandAndsong = bandAndsong.split(', ');
-    bandAndsong[0] = bandAndsong[0].trim();
-    bandAndsong[1] = bandAndsong[1].trim();
-    bandAndsong[0] = bandAndsong[0].replace(" ", "+");
-    bandAndsong[1] = bandAndsong[1].replace(" ", "+");
-    getLyrics(bandAndsong[0], bandAndsong[1]);
+    if (bandAndsong.trim() != "") {
+      getVideo(bandAndsong);
+      bandAndsong = bandAndsong.split(', ');
+      bandAndsong[0] = bandAndsong[0].trim();
+      bandAndsong[1] = bandAndsong[1].trim();
+      bandAndsong[0] = bandAndsong[0].replace(" ", "+");
+      bandAndsong[1] = bandAndsong[1].replace(" ", "+");
+      getLyrics(bandAndsong[0], bandAndsong[1]);
     }
-  }
 });
