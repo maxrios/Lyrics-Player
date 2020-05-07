@@ -1,5 +1,9 @@
 var player;
 
+/*
+  Lyrics Handling
+*/
+
 function getLyrics(band, song) {
   var string = 'https://api.lyrics.ovh/v1/' + band + '/' + song + '/';
 
@@ -18,6 +22,10 @@ function handleLyrics() {
   }
 }
 
+
+/*
+  Video Handling
+*/
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('video-player', {
@@ -47,7 +55,6 @@ function stopVideo() {
   player.stopVideo();
 }
 
-
 function getVideo(bandAndsong) {
   var key = "AIzaSyDX49nkp_0FliM0oONBBfD5xqVIh7-8rkM";
   var url = "https://www.googleapis.com/youtube/v3/search?q=" + bandAndsong + "&part=snippet&type=video&key=" + key;
@@ -64,8 +71,11 @@ function handleVideo() {
   console.log(data);
 }
 
-// Launch with one person activity
-// searchByKeyword('linkin+park', 'numb');
+
+/*
+  Search inputs
+*/
+
 var input = document.getElementById('song-input');
 input.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
@@ -101,3 +111,27 @@ search.addEventListener('click', function(event) {
       getLyrics("Rick Astley", "Never Gonna Give You Up");
     }
 });
+
+
+/*
+  Additional Options
+  Sources: https://www.abeautifulsite.net/adding-and-removing-elements-on-the-fly-using-javascript
+*/
+
+function addElement(parent, tag, id, html) {
+  parent = document.getElementById(parent);
+  var element = document.createElement(tag);
+  element.setAttribute('id', id);
+  element.innerHTML = html;
+  parent.appendChild(element);
+}
+
+function removeElement(id) {
+  var element = document.getElementById(id);
+  element.parentNode.removeChild(element);
+}
+
+function additionalVideos(data) {
+  removeElement('additional-videos');
+  addElement('body', 'div', 'additional-videos', '<ol> <li> <a href=\'https://www.youtube.com/watch?v=' + data.items[1].id.videoId + '\'>' + data.items[1].snippet.title + '</a> </li><li> <a href=\'https://www.youtube.com/watch?v=' + data.items[2].id.videoId + '\'>' + data.items[2].snippet.title + '</a> </li><li> <a href=\'https://www.youtube.com/watch?v=' + data.items[3].id.videoId + '\'>' + data.items[3].snippet.title + '</a> </li> </ol>')
+}
