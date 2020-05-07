@@ -60,6 +60,23 @@ body {
   color: white;
 }
 
+#optional-videos {
+  bottom: 5%;
+  color: white;
+}
+
+#additional-videos {
+  color: white;
+}
+
+#additional-videos a:visited {
+  color: grey;
+}
+
+#additional-videos a:link {
+  color: grey;
+}
+
 .footer {
   position: absolute;
   margin: 0 auto;
