@@ -11,10 +11,8 @@
 }
 
 body {
-  /*background-color: #99badd;*/
   background-image: url('bg.png');
 	background-size: auto;
-
 }
 
 #song-input{
@@ -24,34 +22,25 @@ body {
 	height: 5%;
 	padding: 5px 10px;
 	color: black;
-
-
-
-
 }
 
 #search{
 	margin: auto;
 	position: absolute;
-	left: 70px;
-	top: 0px;
-	right: 0px;
-	bottom: 450px;
+	left: 50%;
+	top: 20%;
 	text-align: center;
-	width: 65px;
-	height: 10px;
+	width: 5%;
+	height: 3%;
 }
 
 #video-player {
 	position: absolute;
-    margin: auto;
-    top: 70px;
-    right: 700px;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    text-align: center;
+  margin: auto;
+  top: 30%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
 	float: left;
 }
 
@@ -64,11 +53,23 @@ body {
   margin-left: 65%;
   text-align: center;
   height: 50%;
-
-
 }
 
+#credits {
+  font-size: 11px;
+  color: white;
+}
 
-#wrapper {
-	margin: auto;
+.footer {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 1%;
+}
+
+.footer a:link {
+  color: grey;
+}
+
+.footer a:visited {
+  color: grey;
 }

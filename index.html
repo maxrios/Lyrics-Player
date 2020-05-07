@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
-
   <head>
-
     <meta charset="utf-8">
-
     <title>Video Lyrics</title>
-
     <link rel="stylesheet" href="style.css">
-
   </head>
-
   <body>
+    <div id="input">
+      <input id="song-input" type="text" name="song-input" placeholder="Search for a song or artist...">
+    </div>
+    <button id="search" type="button" name="button">Search</button>
+    <div id="video-player"></div>
+    <div id="lyrics"></div>
 
-	  <button id="search" type="button" name="button">Search</button>
 
-      <div id="input"> <input id="song-input" type="text" name="song-input" placeholder="Search for a song or artist..."></div>
+    <div class="footer">
+          <p id='credits'>Special thanks to <a href="https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search">Lyrics.ovh</a>, <a href="https://developers.google.com/youtube/iframe_api_reference">YouTube Player API</a>, and <a href="https://developers.google.com/youtube/v3/getting-started">YouTube Data API</a>!</p>
+    </div>
 
-		<br/>
 
-      <div id="video-player"></div>
-
-	  <div id="lyrics"></div>
-	  
-
-    
-
-     <script src="script.js"></script>
-
-     <script id="youtube-player-script" src="https://www.youtube.com/iframe_api"></script>
-
+   <script src="script.js"></script>
+   <script id="youtube-player-script" src="https://www.youtube.com/iframe_api"></script>
   </body>
-
 </html>
-
