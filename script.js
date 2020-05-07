@@ -118,6 +118,7 @@ search.addEventListener('click', function(event) {
   Additional Options
   Sources: https://www.abeautifulsite.net/adding-and-removing-elements-on-the-fly-using-javascript
 */
+var initialLoad = true;
 
 function addElement(parent, tag, id, html) {
   parent = document.getElementById(parent);
@@ -125,6 +126,7 @@ function addElement(parent, tag, id, html) {
   element.setAttribute('id', id);
   element.innerHTML = html;
   parent.appendChild(element);
+  initialLoad = false;
 }
 
 function removeElement(id) {
@@ -133,6 +135,8 @@ function removeElement(id) {
 }
 
 function additionalVideos(data) {
-  removeElement('additional-videos');
+  if (!initialLoad) {
+    removeElement('additional-videos');
+  }
   addElement('optional-videos', 'ol', 'additional-videos', '<li> <a href=\'https://www.youtube.com/watch?v=' + data.items[1].id.videoId + '\'>' + data.items[1].snippet.title + '</a> </li><li> <a href=\'https://www.youtube.com/watch?v=' + data.items[2].id.videoId + '\'>' + data.items[2].snippet.title + '</a> </li><li> <a href=\'https://www.youtube.com/watch?v=' + data.items[3].id.videoId + '\'>' + data.items[3].snippet.title + '</a> </li>')
 }
