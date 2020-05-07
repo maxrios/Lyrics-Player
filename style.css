@@ -61,6 +61,8 @@ body {
 }
 
 #optional-videos {
+position: absolute;
+  margin: 0 auto;
   bottom: 5%;
   color: white;
 }

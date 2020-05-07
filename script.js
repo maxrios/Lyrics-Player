@@ -138,5 +138,5 @@ function additionalVideos(data) {
   if (!initialLoad) {
     removeElement('additional-videos');
   }
-  addElement('optional-videos', 'div', 'additional-videos', '  <h6>Not the right video? Try on of these:</h6> <ol> <li> <a target=\"_blank\" href=\'https://www.youtube.com/watch?v=' + data.items[1].id.videoId + '\'>' + data.items[1].snippet.title + '</a> </li><li> <a target=\"_blank\" href=\'https://www.youtube.com/watch?v=' + data.items[2].id.videoId + '\'>' + data.items[2].snippet.title + '</a> </li><li> <a target=\"_blank\" href=\'https://www.youtube.com/watch?v=' + data.items[3].id.videoId + '\'>' + data.items[3].snippet.title + '</a> </li> </ol>')
+  addElement('optional-videos', 'div', 'additional-videos', '  <h3>Not the right video? Try on of these:</h6> <ol> <li> <a target=\"_blank\" href=\'https://www.youtube.com/watch?v=' + data.items[1].id.videoId + '\'>' + data.items[1].snippet.title + '</a> </li><li> <a target=\"_blank\" href=\'https://www.youtube.com/watch?v=' + data.items[2].id.videoId + '\'>' + data.items[2].snippet.title + '</a> </li><li> <a target=\"_blank\" href=\'https://www.youtube.com/watch?v=' + data.items[3].id.videoId + '\'>' + data.items[3].snippet.title + '</a> </li> </ol>')
 }
