@@ -61,6 +61,7 @@ function getVideo(bandAndsong) {
 function handleVideo() {
   var data = JSON.parse(this.responseText);
   player.loadVideoById(data.items[0].id.videoId);
+  console.log(data);
 }
 
 // Launch with one person activity
